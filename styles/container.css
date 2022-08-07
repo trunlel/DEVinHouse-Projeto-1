@@ -1,0 +1,33 @@
+.container {
+  width: 90%;
+  height: 86%;
+  min-height: 80%;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+.divTable {
+  padding: 10px;
+  width: auto;
+  height: inherit;
+  overflow: auto;
+  padding-bottom: 75px;
+}
+
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke;
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+.descricao {
+  text-indent: 10px;
+}
+#table-item.lista-ul-hidden {
+  display: none;
+}

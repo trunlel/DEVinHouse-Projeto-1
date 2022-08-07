@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles/body.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/container.css">
+  <link rel="stylesheet" href="styles/modal.css">
+  <link rel="stylesheet" href="styles/cardStyle.css">
+  
+  <link rel="shortcut icon" href="assets/favicon/mirtilo.png" type="image/x-icon">
+
+    <title>Project Mirtilo</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Project Mirtilo</h1>
+      <header>
+        <ul id="lista-ul" >
+        <li>
+        Total <span class="total">0</span>
+        </li>
+        <li>
+        FrontEnd <span class="front">0</span>
+        </li>
+        <li>
+        BackEnd <span class="back">0</span>
+        </li>
+        <li>
+        FullStack <span class="full">0</span>
+        </li>
+        <li>
+        Softskill <span class="soft">0</span>
+        </li></ul></header>
+        
+      <form class="searchForm">
+      <div id="search">
+        <input id="search-box"
+          type="text"
+          name=""
+          id="pesquisa"
+          placeholder="Digite um título para buscar..."
+        />
+        <button class="cancel"><i class="fa-solid fa-x" id="cancel-search-action" type="reset"></i></button>
+    </form>
+      </div>
+      <button id="layout" class="layout buttons-action" title="Mudar Visualização"><i class="fa-solid fa-border-all"></i></button>
+     
+      <button onclick="openModal()" id="new">Adicionar</button>
+    </div>
+
+    <div class="divTable">
+      <table id="table-item" class="">
+        <thead>
+          <tr>
+            <th class="tituloStyle">Título</th>
+            <th class="skillStyle">Linguagem/Skill</th>
+            <th class="categoriaStyle">Categoria</th>
+            <th class="desStyle">Descrição</th>
+            <th class="acao">Youtube</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody id="filtro">
+        </tbody>
+      </table>
+
+      <div id="cards-container" class="cards-container-hidden"></div>
+
+      </div>
+    </div>
+
+<main>
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+        <div>
+          <label for="titulo">Título</label>
+          <input 
+          name="titulo"
+          id="titulo"
+          maxlength="64"
+          minlength="8"
+          type="input" 
+          required />
+        </div>
+
+          <div>
+          <label for="skill">Linguagem/Skill</label>
+          <input 
+          name="skill"
+          id="skill" 
+          maxlength="16"
+          minlength="4"
+          type="text" 
+          required />
+        </div>
+  
+          <div>
+            <label for="categoria" class="select">Categoria</label>
+            <select name="categoria" id="categoria" required>
+              <option value="">Escolha</option>
+              <option value="FrontEnd">FrontEnd</option>
+              <option value="BackEnd">BackEnd</option>
+              <option value="FullStack">FullStack</option>
+              <option value="SoftSkill">Comportamental/Softskill</option>
+            </select>
+          
+          </div>
+
+          <div>
+            <label for="descricao">Descrição</label>
+            <br>
+            <textarea
+            class="descricao"
+              name="descricao"
+              id="descricao"
+              cols="60"
+              rows="5"
+              required
+              minlength="32"
+              maxlength="512"
+            ></textarea>
+          </div>
+          <div>
+            <label for="" >Vídeo do Youtube*</label>
+            <input type="text" name="video" id="pushVideo" class="pushVideo" />
+          </div>
+
+          <button id="btnSalvar" class="btnSalvar">Salvar</button>
+          <button id="btnLimpar" type="reset" class="btnLimpar">Apagar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</main>
+  <script src="script/script.js" defer></script>
+</body>
+
+</html>
